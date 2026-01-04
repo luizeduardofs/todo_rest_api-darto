@@ -1,9 +1,11 @@
 import "package:darto/darto.dart";
 
+import "config/inject.dart";
 import "database/db.dart";
 import "router.dart";
 
 void main() async {
+  Inject.init();
   await dartonic.sync();
   final app = Darto();
 

@@ -1,11 +1,12 @@
 import "package:darto/darto.dart";
+import "package:injectfy/injectfy.dart";
 
 import "controllers/todo_controller.dart";
 import "middlewares/logger_middleware.dart";
 
 Router rootRouter() {
   final router = Router();
-  final todoController = TodoController();
+  final todoController = Injectfy.get<TodoController>();
 
   router.get("/todos", loggerMiddleware, todoController.getAll);
   router.post("/todos", loggerMiddleware, todoController.create);
