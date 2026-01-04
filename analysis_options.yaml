@@ -1,0 +1,13 @@
+include: package:lints/recommended.yaml
+
+formatter:
+  trailing_commas: preserve
+
+linter:
+  rules:
+    - camel_case_types
+    - prefer_double_quotes
+
+# analyzer:
+#   exclude:
+#     - path/to/excluded/files/**

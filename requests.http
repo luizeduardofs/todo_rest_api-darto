@@ -1,0 +1,29 @@
+@baseUrl = http://localhost:3000/api/v1
+
+GET {{baseUrl}}/todos HTTP/1.1
+content-type: application/json
+
+###
+
+POST {{baseUrl}}/todos HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Comer",
+    "completed": false
+}
+
+###
+
+PUT {{baseUrl}}/todos/1 HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Ler a bíblia",
+    "completed": true
+}
+
+###
+
+DELETE {{baseUrl}}/todos/2 HTTP/1.1
+content-type: application/json
